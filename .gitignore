@@ -1,6 +1,8 @@
+
 .env
+venv/
 chroma_db/
-model_cache/
+app.log
+docs/*.pdf
 __pycache__/
 *.pyc
-.streamlit/
