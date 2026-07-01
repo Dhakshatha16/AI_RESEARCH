@@ -8,7 +8,6 @@ def create_vectorstore(chunks, embeddings):
         embedding=embeddings,
         persist_directory="chroma_db"
     )
-
     print("STEP 2")
     print("✅ Vectorstore created & saved")
     return vectorstore
