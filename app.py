@@ -224,11 +224,12 @@ if prompt := st.chat_input("Ask me anything..."):
                 web_results = web_search_with_retry(search_tool, prompt)
                 if web_results:
                     results = web_results.get("results", [])
-                    response = "🌐 **Web Search Results:**\n\n"
+                    response = "### 🌐 Web Search Results\n\n"
                     for r in results:
-                        response += f"<small>**{r['title']}**</small>\n\n"
-                        response += f"<small>{r['content']}</small>\n\n"
-                        response += f"<small>🔗 [Source]({r['url']})</small>\n\n---\n\n"
+                        response += f"**{r['title']}**\n\n"
+                        response += f"{r['content']}\n\n"
+                        response += f"🔗 {r['url']}\n\n"
+                        response += "---\n\n"
                 else:
                     response = "❌ Web search failed — Please try again!"
 
